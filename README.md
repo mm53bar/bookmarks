@@ -15,5 +15,5 @@ Add the following to your `.bashrc`:
 kram() { 
   output_dir=~/src/bookmarks/urls
   url=$1
-  wget --quiet -O $output_dir/${url##*/}.md --post-data "u=url" http://fuckyeahmarkdown.com/go/; 
+  wget -O $output_dir/${url##*/}_$(date +%b%d%Y%H%M%S).md --post-data "u=url" http://fuckyeahmarkdown.com/go/; 
 } 
